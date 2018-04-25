@@ -1,4 +1,8 @@
-#include "array_list.h";
+// Copyright Matheus Lucca do Carmo
+
+#include "linked_queue.h"
+#include "Semaphore.h"
+#include "Car.h"
 
 class Road
 {
@@ -10,11 +14,11 @@ class Road
         double probLeft;
         double probRight;
 
-        std::queue<Car*> cars;
+        LinkedQueue<Car> cars;
 
     public:
         Road(Semaphore& semaphore, double size, double max_velocity, double probLeft, double probRight);
-        ~Roead();
+        ~Road();
 
         void addCar(Car car);
         Car popCar();
@@ -22,4 +26,4 @@ class Road
         bool full();
 
         bool blocked;
-}
+};
