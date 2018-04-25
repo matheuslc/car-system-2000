@@ -12,5 +12,5 @@ class EventMachine {
         virtual void log();
 
         virtual LinkedQueue<EventMachine*> runEvent();
-}
+};
 

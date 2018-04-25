@@ -1,27 +1,24 @@
-// Copyright Carmel
-
 #include "Semaphore.h"
 
-Semaphore::Sempahore() {
-    isOpen = false;
-    nextSemaphore{nullptr}
+Semaphore::Semaphore():
+	open{false},
+	nextSemaphore{nullptr}
+	{}
+
+Semaphore::Semaphore(bool open_):
+	open{open_},
+	nextSemaphore{nullptr}
+	{}
+
+void Semaphore::nextState() {
+	open = !open;
+	nextSemaphore->open = !(nextSemaphore->open);
 }
 
-// Override constructor
-Semaphore::Semaphore(bool state) {
-    isOpen = state;
-    nextSemaphore{nullptr}
+bool Semaphore::getOpen() const {
+	return open;
 }
 
-void Semaphore::turnSempahores {
-    isOpen = !isOpen; // se é true é false se é false é true
-    nextSemaphore->isOpen = !(nextSemaphore->open);
-}
-
-void Semaphore::setNext(Semaphore* semaphore) {
-	nextSemaphore = semaphore;
-}
-
-bool Semaphore::isOpenState() {
-    return isOpen;
+void Semaphore::setNext(Semaphore* s_) {
+	nextSemaphore = s_;
 }

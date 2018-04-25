@@ -1,5 +1,8 @@
 #include <iostream>
 #include "Road.h"
+#include "EventMachine.h"
+#include "Semaphore.h"
+#include "Car.h"
 
 using namespace std;
 

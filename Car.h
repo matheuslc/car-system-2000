@@ -1,8 +1,7 @@
 // Copyright Matheus Lucca do Carmo
 
-/**
- * @brief Class that represents a vehicle.
- */
+#ifndef CAR_H
+#define CAR_H
 
 class Car {
     private:
@@ -12,3 +11,5 @@ class Car {
         Car();
         int getSize();
 };
+
+#endif

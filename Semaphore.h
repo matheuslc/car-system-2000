@@ -1,5 +1,8 @@
 // Copyright Matheus Lucca do Carmo
 
+#ifndef SEMAPHORE_H
+#define SEMAPHORE_H
+
 class Semaphore {
     private:
         Semaphore* nextSemaphore;
@@ -14,3 +17,5 @@ class Semaphore {
         bool isOpenState() const;
         void setNext(Semaphore* semaphore_);
 };
+
+#endif 

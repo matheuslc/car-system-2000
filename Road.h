@@ -1,5 +1,8 @@
 // Copyright Matheus Lucca do Carmo
 
+#ifndef ROAD_H
+#define ROAD_H
+
 #include "linked_queue.h"
 #include "Semaphore.h"
 #include "Car.h"
@@ -27,3 +30,5 @@ class Road
 
         bool blocked;
 };
+
+#endif
