@@ -11,6 +11,6 @@ class Semaphore {
 
         void turnSempahores();
         
-        bool openState() const;
+        bool isOpenState() const;
         void setNext(Semaphore* semaphore_);
 };
